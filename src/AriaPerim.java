@@ -2,18 +2,16 @@ public abstract class AriaPerim {
     private String name;
     private int countOfAngels;
     private int countOfSides;
-    private double areas;
-    private double perimeters;
+
 
     public AriaPerim() {
     }
 
-    public AriaPerim(String name, int countOfAngels, int countOfSides, double areas, double perimeters) {
+    public AriaPerim(String name, int countOfAngels, int countOfSides) {
         this.name = name;
         this.countOfAngels = countOfAngels;
         this.countOfSides = countOfSides;
-        this.areas = areas;
-        this.perimeters = perimeters;
+
     }
 
     public String getName() {
@@ -40,21 +38,7 @@ public abstract class AriaPerim {
         this.countOfSides = countOfSides;
     }
 
-    public double getAreas() {
-        return this.areas;
-    }
 
-    public void setAreas(double areas) {
-        this.areas = areas;
-    }
-
-    public double getPerimeters() {
-        return this.perimeters;
-    }
-
-    public void setPerimeters(double perimeters) {
-        this.perimeters = perimeters;
-    }
 
 
     @Override
@@ -63,11 +47,11 @@ public abstract class AriaPerim {
     }
 
     public void area() {
-        System.out.println("Aria of " + name + " equals: " + areas);
+        System.out.println("Aria of " + name + " equals: ");
     }
 
     public void perimeter() {
-        System.out.println("Perimeter of " + name + " equals: " + perimeters);
+        System.out.println("Perimeter of " + name + " equals: ");
     }
 
 }

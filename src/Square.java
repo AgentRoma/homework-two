@@ -1,39 +1,35 @@
 public class Square extends AriaPerim {
-    private double sideLength;
-    private double height;
+    private double a;
+
 
 
     public Square() {
     }
 
-    public Square(String name, int countOfAngels, int countOfSides, double areas, double perimeters, double sideLength, double height){
-        super(name, countOfAngels, countOfSides, areas, perimeters);
-        this.height = height;
-        this.sideLength = sideLength;
+    public Square(String name, int countOfAngels, int countOfSides, double a){
+        super(name, countOfAngels, countOfSides);
+        this.a = a;
+
 
 
     }
 
-    public double getHeight(){
-        return height;
+    public double getA() {
+        return a;
     }
 
-    public void setHeight(double height){
-        this.height = height;
+
+
+    public void setA(double a) {
+        this.a = a;
     }
 
-    public double getSideLength(){
-        return sideLength;
-    }
 
-    public void setSideLength(double sideLength){
-        this.sideLength = sideLength;
-    }
 
     @Override
     public String toString (){
         return " Figure " + this.getName() + " " + "\n Has " + this.getCountOfSides() + " sides"+ "\n Length of side is: "
-                + sideLength + " cm" +  "\n The height of figure is: " + height
+                + a + " cm" +  "\n The height of figure is: " + a
                 + " cm" + "\n This figure has " + this.getCountOfAngels() + " angels";
 
     }
@@ -41,12 +37,13 @@ public class Square extends AriaPerim {
     @Override
 
     public void area() {
-        System.out.println(" Aria of " + this.getName() + " equals: " + this.getAreas() + " cm^2");
+
+        System.out.println(" Aria of " + this.getName() + " equals: " + (a * a) + " cm^2");
     }
 
     @Override
     public void perimeter(){
-        System.out.println(" Perimeter of " + this.getName() + " equals: " + this.getPerimeters() + " cm");
+        System.out.println(" Perimeter of " + this.getName() + " equals: " + (a * 4) + " cm");
     }
 
 }

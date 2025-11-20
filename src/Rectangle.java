@@ -1,26 +1,16 @@
 public class Rectangle extends AriaPerim{
     private double sideLength;
-    private double height;
     private double width;
 
 
     public Rectangle(){
     }
 
-    public Rectangle(String name, int countOfAngels, int countOfSides, double areas, double perimeters, double sideLength, double height, double width){
-        super(name, countOfAngels, countOfSides, areas, perimeters);
-        this.height = height;
+    public Rectangle(String name, int countOfAngels, int countOfSides, double sideLength,  double width){
+        super(name, countOfAngels, countOfSides);
         this.sideLength = sideLength;
         this.width = width;
 
-    }
-
-    public double getHeight(){
-        return height;
-    }
-
-    public void setHeight(double height){
-        this.height = height;
     }
 
     public double getSideLength(){
@@ -41,7 +31,7 @@ public class Rectangle extends AriaPerim{
 @Override
     public String toString(){
      return " Figure " + this.getName() + " " + "\n Has " + this.getCountOfSides() + " sides"+ "\n Length of side is: "
-            + sideLength + " cm" + "\n Width is: "+ width + " cm"+  "\n The height of figure is: " + height
+            + sideLength + " cm" + "\n Width is: "+ width + " cm"+  "\n The height of figure is: " + sideLength
                 + " cm" + "\n This figure has " + this.getCountOfAngels() + " angels";
 
     }
@@ -49,12 +39,12 @@ public class Rectangle extends AriaPerim{
     @Override
 
     public void area() {
-        System.out.println(" Aria of " + this.getName() + " equals: " + this.getAreas() + " cm^2");
+        System.out.println(" Aria of " + this.getName() + " equals: " + sideLength * width + " cm^2");
     }
 
     @Override
     public void perimeter(){
-        System.out.println(" Perimeter of " + this.getName() + " equals: " + this.getPerimeters() + " cm");
+        System.out.println(" Perimeter of " + this.getName() + " equals: " + (sideLength + width) * 2  + " cm");
     }
 
 
